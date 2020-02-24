@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import { SmurfContext } from "../contexts/SmurfContext";
+import { Smurf } from "./Smurf";
 
 export const SmurfList = () => {
   const { smurfState, dispatch } = useContext(SmurfContext);
@@ -8,11 +9,7 @@ export const SmurfList = () => {
   return (
     <div>
       {smurfState.map((smurf, index) => {
-        return (
-          <p key={index} props={smurf} dispatch={dispatch}>
-            {smurf.name}
-          </p>
-        );
+        return <Smurf key={index} props={smurf} dispatch={dispatch} />;
       })}
     </div>
   );
