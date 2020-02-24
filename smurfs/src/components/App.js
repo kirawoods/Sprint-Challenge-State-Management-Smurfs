@@ -5,6 +5,7 @@ import { SmurfContext } from "../contexts/SmurfContext";
 import { initialSmurfs } from "../data";
 import { reducer } from "../reducers";
 import { SmurfList } from "./SmurfList";
+import { AddSmurf } from "./AddSmurf";
 const App = () => {
   const [loader, setLoader] = useState([]);
 
@@ -25,6 +26,7 @@ const App = () => {
       <div className="App">
         <h1>SMURFS! Using Redux</h1>
         <SmurfList />
+        <AddSmurf />
       </div>
     </SmurfContext.Provider>
   );
